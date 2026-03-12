@@ -47,3 +47,6 @@ for epoch in range(epochs):
         optimizer.step()
 
         print("Loss:", loss.item())
+        torch.save(model.state_dict(), "models/bias_model.pt")
+
+        print("Model saved successfully")
